@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArxivFilterPro</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath@1.0.0/css/texmath.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1>ArxivFilterPro</h1>
+      <div class="section">
+        <label for="searchInput">关键词检索</label>
+        <input id="searchInput" type="text" placeholder="输入关键词后回车" />
+      </div>
+      <div class="section">
+        <p>日期筛选</p>
+        <label><input type="radio" name="dateFilter" value="7" checked /> 最近1周</label>
+        <label><input type="radio" name="dateFilter" value="30" /> 最近1个月</label>
+        <label><input type="radio" name="dateFilter" value="90" /> 最近3个月</label>
+        <label><input type="radio" name="dateFilter" value="180" /> 最近6个月</label>
+        <label><input type="radio" name="dateFilter" value="365" /> 最近12个月</label>
+      </div>
+    </aside>
+    <main>
+      <div id="cardCount"></div>
+      <div id="cards" class="cards"></div>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModal" class="close-btn">关闭</button>
+      <div id="modalHeader"></div>
+      <section class="analysis-panel">
+        <div class="panel-head">
+          <div>
+            <div class="panel-eyebrow">Structured Reading</div>
+            <h2 class="panel-title">论文摘要视图</h2>
+          </div>
+        </div>
+        <div class="tabs">
+          <button data-tab="ai_abstract">AI摘要</button>
+          <button data-tab="problem">问题</button>
+          <button data-tab="method">方法</button>
+          <button data-tab="result">结果</button>
+          <button data-tab="keypoint">要点</button>
+          <button data-tab="abstract">原文摘要</button>
+        </div>
+        <article id="tabContent" class="subcard analysis-body"></article>
+      </section>
+      <section class="content-panel">
+        <div class="panel-head">
+          <div>
+            <div class="panel-eyebrow">Long-form Overview</div>
+            <h2 class="panel-title">正文概述</h2>
+          </div>
+        </div>
+        <article id="fullContent" class="subcard content-body"></article>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it-texmath@1.0.0/texmath.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
