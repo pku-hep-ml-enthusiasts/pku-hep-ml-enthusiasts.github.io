@@ -45,6 +45,7 @@ function renderCards() {
     <article class="card" data-id="${card.id}">
       <div class="meta-row">
         <span class="badge">${card.tag}</span>
+        <span class="badge category">${card.primary_category}</span>
         <span class="badge">${card.date}</span>
       </div>
       <div class="title-en">${escapeHtml(card.title_en)}</div>
@@ -72,6 +73,11 @@ function openModal(id) {
   const card = allCards.find((c) => c.id === id);
   if (!card) return;
   document.getElementById("modalHeader").innerHTML = `
+    <div class="header-meta">
+      <span class="badge">${card.tag}</span>
+      <span class="badge category">${card.primary_category}</span>
+      <span class="badge">${card.date}</span>
+    </div>
     <div class="title-en">${escapeHtml(card.title_en)}</div>
     <div class="title-zh">${escapeHtml(card.title_zh)}</div>
     <div class="authors">${escapeHtml(card.authors_full)} <a class="abs-link" href="${card.abs_url}" target="_blank">🔗</a></div>

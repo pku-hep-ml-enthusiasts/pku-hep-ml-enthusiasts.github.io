@@ -40,6 +40,16 @@ main { padding: 24px; }
 .abs-link { margin-left: 6px; text-decoration: none; }
 .meta-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
 .badge { font-size: 0.75rem; background: #e8eef8; color: #1f3f71; padding: 2px 8px; border-radius: 999px; }
+.badge.category {
+  background: #edf4ec;
+  color: #2f5c3b;
+}
+.header-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 12px 0;
+}
 .modal {
   position: fixed;
   inset: 0;
