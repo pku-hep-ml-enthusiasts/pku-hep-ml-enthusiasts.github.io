@@ -35,7 +35,6 @@ main { padding: 24px; }
 }
 .title-en { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
 .title-zh { font-size: 0.93rem; color: #31435d; margin-bottom: 8px; }
-.authors { font-size: 0.82rem; color: #5a6b84; margin-bottom: 10px; }
 .authors { font-size: 0.82rem; color: #5a6b84; margin-bottom: 4px; }
 .paper-links {
   display: flex;
