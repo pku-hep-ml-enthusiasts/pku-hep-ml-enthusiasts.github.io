@@ -52,6 +52,26 @@ main { padding: 24px; }
   text-decoration: none;
   line-height: 1;
 }
+.version-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.version-btn {
+  border: 1px solid #cad4e3;
+  background: #f4f7fb;
+  color: #4a5d77;
+  border-radius: 999px;
+  padding: 2px 9px;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+.version-btn.active {
+  background: #24466f;
+  border-color: #24466f;
+  color: #f8fbff;
+}
 .card-body { font-size: 0.92rem; line-height: 1.6; color: #202b3a; }
 .meta-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
 .badge { font-size: 0.75rem; background: #e8eef8; color: #1f3f71; padding: 2px 8px; border-radius: 999px; }
